@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: gulim;
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let temp1=5, temp2=2
+        let max, min
+        if(temp1 > temp2){
+            max = temp1
+            min = temp2
+        } else{
+            min =temp1
+            max = temp2
+        }
+        pl(`큰값 ${max}`)
+        pl(`작은값 ${min}`)
+        function pl(str){
+            document.write(`<span>${str}<span><br>`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let output = ''
+        let student = {
+            이름 : '홍길동',
+            국어 : 92,
+            수학 : 98,
+            영어 : 84,
+            과학 : 98
+        }
+
+        
+        total = 0
+        for(let key in student){
+            output += `${key} : ${student[key]}\n`
+            if(key === '이름'){
+                continue;
+            }
+            total += student[key]
+        }
+        console.log(output)
+        console.log(total)
+    </script>
+</body>
+</html>
