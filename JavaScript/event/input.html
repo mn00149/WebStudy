@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(f){
+            if(f.wname.value == '' || f.wname.value.length ==0){
+                alert('이름을 입력하세요');
+                f.wname.focus();//onSubmit 기능을 쓸떄만 사용
+                return false
+            }else if(f.subject.value.length == 0){
+                alert('제목을 입력하세요');
+                f.subject.focus();
+                return false
+            }else if(f.wcontent.value == ''){
+                alert('내용을 입력하세요');
+                f.wcontent.focus();
+                return false
+            }else{
+                alert('데이터 정상 입력, 계속 진행합니다.');
+                // f.submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form method = 'post' action='' name='myform' onsubmit="return check(this)">
+        <h2>방명록</h2>
+        이름 : <input name = 'wname' type='text' >  <br>
+        제목 : <input name = 'subject' type= 'text' size='50'> <br>
+        내용 : <textarea name = 'wcontent' rows='8' cols= '54'></textarea> <br>
+       <!-- utton의 기본 타입은 submit -->
+        <!-- <button type="button" onclick="check(this.form)">저장</button> -->
+        <input type="image" src="disks.jpg"></input>
+    </form>
+</body>
+</html>

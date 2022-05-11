@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styre.css">
+    <script>
+        function toValid(str){
+            let index = str.indexOf("https://")
+            
+            if (index === -1 ){
+                str ="https://" + str
+            }
+            return str
+        }
+       function senditNaver(){
+        location.href="https://www.naver.com/"
+       }
+       function senditKyo(){
+        location.href="http://www.kyobobook.co.kr/index.laf?gclid=Cj0KCQjwmuiTBhDoARIsAPiv6L8agOzhrF5lAph30MGKEy6Kx_3YVHcSuIuQ_gSakBniIPdTCqtIEZ0aAu0MEALw_wcB"
+       }
+       function senditWeather(){
+        location.href="https://www.weather.go.kr/w/index.do"
+       }
+        function sendit(){
+            let str = document.getElementById('url').value
+            let index = str.indexOf("https://")
+
+        if(str == ""){
+            alert("주소 입력")
+            document.regiform.url.focus()
+        }else{
+           
+            str = toValid(str)
+            console.log(str)
+            location.href=str
+        }
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="regiform">
+        <input type="text" id="url" name="url" size="50">
+        <a href="javascript:sendit()">주소이동</a>
+        <button type="button" onclick="sendit()">주소이동</button>
+        <button type="button" onclick="senditNaver()">Naver</button>
+        <button type="button" onclick="senditKyo()">교보문고</button>
+        <button type="button" onclick="senditWeather()">기상청</button>
+    </form>
+   
+</body>
+</html>

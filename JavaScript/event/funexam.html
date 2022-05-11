@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 1;
+
+        }
+        table, td, th {
+            color: black;
+   
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" name="form">
+        row: <input type="text" name="row" id="row" size="20">
+        colum: <input type="text" name="col" id="col" size="20">
+        <button type="button" onclick="check(this.form)">make table</button>
+    </form>
+    <div id="table">
+
+    </div>
+    <script>
+        function makeTable(row, col){
+            console.log(row)
+            let html = "<table>"
+            for(let i = 0; i<row; i++){
+               
+                html += "<tr>\n"
+                for(let j =0; j<col; j++){
+                    html += "<td>&nbsp</td>\n"
+                }
+                html += "</tr>\n"
+        
+            }
+            html += "</table>"
+            console.log(html)
+            return html
+        }
+        function check(form){
+            let row = form.row.value
+            let col = form.col.value
+            let table = document.getElementById('table')
+            if(isFinite(row) && isFinite(col)){
+                if(!(row>=3 && row <=10)){
+                    alert("row 3~10 입력")
+                    return
+                }
+                if(!(col>=3 && col <=10)){
+                    alert("col 3~10 입력")
+                    return
+                }
+                console.log("aa")
+                table.innerHTML = makeTable(row, col)
+
+
+
+            }else{
+                alert("number please")
+            }
+
+        }
+        
+    </script>
+</body>
+</html>

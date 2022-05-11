@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="frmSelect">
+        <select name="ansqu" id="" onchange="ansquChange(this.form)">
+            <option value=''> [종류 선택] </option>
+            <option value='A001'> [질문] </option>
+            <option value='A002'> [답변] </option>
+            <option value='A003'> [참고] </option>
+            <option value='A004'> [공지] </option>
+            <option value='A005'> [추천] </option>
+            <option value='A006'> [선택 안함] </option>
+        </select>
+        <select name="pt" id="" onchange="partChange(this.form)">
+            <option value=''> [분야 선택] </option>
+            <option value='P001'> [JAVA] </option>
+            <option value='P002'> [JSP] </option>
+            <option value='P003'> [Spring] </option>
+            <option value='P004'> [JavaScript] </option>
+            <option value='P005'> [ORACLE] </option>
+            <option value='P006'> [선택 안함] </option>
+        </select>
+        <input type="text" name="title" class="title" size="85" maxlength="150">
+    </form>
+       
+    <form action="" name="frmData">
+        분야 선택 전송값: <input type='text' name='ansqu' value='' size='50'><br>
+        언어 선택 전송값: <input type='text' name='pt' value='' size='50'>
+    </form>
+</body>
+<script>
+    function ansquChange(form){
+        let form = document.form
+        let optionValue = form.ansqu.options[form.ansqu.selectedIndex].value
+    }
+</script>
+</html>
