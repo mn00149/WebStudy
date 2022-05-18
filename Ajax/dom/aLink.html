@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function toSite(url){
+            document.getElementById("thelink").href = url
+        }
+    </script>
+</head>
+<body>
+    <a  id="thelink">클릭하세요</a>
+    
+ 
+    <input type="button" onclick="toSite('http://www.kma.go.kr')" value="기상청" />
+    <input type="button" onclick="toSite('http://www.yahoo.com')" value="야후" />
+ 
+</body>
+</html>

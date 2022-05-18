@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            document.getElementById("content").style.display="";
+        }
+
+        
+        function hide(){
+            document.getElementById("content").style.display="none";
+        }
+
+        function show2(){
+            document.getElementById("content").style.visibility="";
+        }
+
+        
+        function hide2(){
+            document.getElementById("content").style.visibility="hidden";
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        DIV Tag apear <br>
+        <img src='http://www.apache.org/images/ac2008us_343x114.jpg' width='300' height='250'>
+    </div>
+    <button onclick="show()">div 보이기(display)</button>
+    <button onclick="hide()">div 숨기기(display)</button>
+    <button onclick="show2()">div 보이기(visibility)</button>
+    <button onclick="hide2()">div 숨기기(visibility)</button>
+</body>
+</html>

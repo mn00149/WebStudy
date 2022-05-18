@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background: #ECE9D8 ;
+            height: 100vh;
+            display: flex; /*flexbox 선언, 기본 중심축이 행방향*/
+            justify-content :center ; /*item들 중심축에서 가운데 정렬*/
+            
+        }
+        .mainItem1 {
+            margin: 100px 10px 0 0;
+            width:700px;
+            height:470px;
+            background: aqua;
+        }
+        .mainItem2 {
+            margin-top: 100px;
+            width:100px;
+            height:450px;
+            background: white;
+            display: flex; /*flexbox선언*/
+            flex-direction: column; /*중심축을 열방향으로 선언*/
+            justify-content:  space-between; /* 앞,뒤 공간없고 중간에만 균등 간격 */
+         
+        }
+         
+         
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mainItem1" id="showMain"></div>
+        <div class="mainItem2">
+            <div class="item item1" id="show1" onclick="show(this)"></div>
+            <div class="item item2" id="show2" onclick="show(this)"></div>
+            <div class="item item3" id="show3" onclick="show(this)"></div>
+            <div class="item item4" id="show4" onclick="show(this)"></div>
+            <div class="item item5" id="show5" onclick="show(this)"></div>
+        </div>
+    </div>
+</body>
+</html>
